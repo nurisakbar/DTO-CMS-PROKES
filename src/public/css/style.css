@@ -1,0 +1,46 @@
+body {
+    font-family: "Barlow";
+}
+
+.icon-category {
+    height: 46.666664123535156px;
+    width: 46.666664123535156px;
+    margin-right: 20px;
+}
+
+.icon-category-small {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.category-label {
+    color: #163342;
+    font-weight: 700;
+    left: 68px;
+    top: 16px;
+}
+
+.label-help {
+    font-family: Barlow;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.fa{
+    margin-left: 10px;
+}
+a{
+    color:#163342;
+}
+a:hover {
+    color:#163342;
+    text-decoration: none;
+}
+.container h4{
+    font-weight:700;
+    margin-bottom:30px;
+}
