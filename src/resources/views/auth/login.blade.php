@@ -45,7 +45,7 @@
                                         <div class="form-group">
                                             <input id="email" type="email" placeholder="Alamat Email"
                                                 class="form-control @error('email') is-invalid @enderror" name="email"
-                                                value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                value="{{ old('email') }}" autocomplete="email" autofocus>
 
                                             @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
                                         <div class="form-group">
                                             <input id="password" placeholder="Password" type="password"
                                                 class="form-control @error('password') is-invalid @enderror"
-                                                name="password" required autocomplete="current-password">
+                                                name="password" autocomplete="current-password">
 
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -64,6 +64,7 @@
                                             </span>
                                             @enderror
                                         </div>
+                                        
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
@@ -72,6 +73,27 @@
                                             </div>
                                         </div>
                                   
+                                        <div class="form-group row">
+                                            <label for="captcha" class="col-md-4 col-form-label text-md-right">Captcha</label>
+                                            <div class="col-md-6 captcha">
+                                                <span>{!! captcha_img() !!}</span>
+                                                <button type="button" class="btn btn-danger" class="reload" id="reload">
+                                                &#x21bb;
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="captcha" class="col-md-4 col-form-label text-md-right">Enter Captcha</label>
+                                            <div class="col-md-6">
+                                                <input id="captcha" type="text" class="form-control @error('captcha') is-invalid @enderror" placeholder="Enter Captcha" name="captcha">
+                                                @error('captcha')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
                                         <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                                     </form>
                        
@@ -96,6 +118,18 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#reload').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: 'reload-captcha',
+                success: function (data) {
+                    $(".captcha span").html(data.captcha);
+                }
+            });
+        });
+    </script>
 
 </body>
 
