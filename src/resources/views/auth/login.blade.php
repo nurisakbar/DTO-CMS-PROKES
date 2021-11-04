@@ -64,14 +64,7 @@
                                             </span>
                                             @enderror
                                         </div>
-                                        
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
+                                    
                                   
                                         <div class="form-group row">
                                             <label for="captcha" class="col-md-4 col-form-label text-md-right">Captcha</label>

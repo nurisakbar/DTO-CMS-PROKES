@@ -50,6 +50,7 @@
                 ['link'=>'/home','label'=>'Dashboard','icon'=>'fas fa-fw fa-tachometer-alt'],
                 ['link'=>'/admin/category','label'=>'Category','icon'=>'fas fa-fw fa-tachometer-alt'],
                 ['link'=>'/admin/article','label'=>'Article','icon'=>'fas fa-fw fa-newspaper'],
+                ['link'=>'/','label'=>'Lihat Web','icon'=>'fas fa-eye'],
             ];
             ?>
 
