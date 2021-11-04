@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FaqCreateRequest extends FormRequest
+class ArticleStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,8 @@ class FaqCreateRequest extends FormRequest
     {
         return [
             'title'             =>  'required',
-            'content'           =>  'required'
+            'content'           =>  'required',
+            'image'             =>  'image|mimes:jpg,png|max:2048'
         ];
     }
 }

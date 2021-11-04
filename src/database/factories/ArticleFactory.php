@@ -2,12 +2,12 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Faq;
+use App\Article;
 use Faker\Generator as Faker;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 
-$factory->define(Faq::class, function (Faker $faker) {
+$factory->define(Article::class, function (Faker $faker) {
     $title = $faker->sentence($nbWords = 6, $variableNbWords = true);
     $slug = Str::slug($title);
 

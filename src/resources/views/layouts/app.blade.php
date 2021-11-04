@@ -49,7 +49,7 @@
     $menus = [
                 ['link'=>'/home','label'=>'Dashboard','icon'=>'fas fa-fw fa-tachometer-alt'],
                 ['link'=>'/admin/category','label'=>'Category','icon'=>'fas fa-fw fa-tachometer-alt'],
-                ['link'=>'/admin/faq','label'=>'FAQ','icon'=>'fas fa-fw fa-tachometer-alt'],
+                ['link'=>'/admin/article','label'=>'Article','icon'=>'fas fa-fw fa-newspaper'],
             ];
             ?>
 
@@ -254,7 +254,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang : {{Auth::user()->name}}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang : </span>
                                 <img class="img-profile rounded-circle"
                                     src="{{asset('sbadmin/img/undraw_profile.svg')}}">
                             </a>

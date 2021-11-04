@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Faq extends Model
+class Article extends Model
 {
-    protected $fillable = ['title','slug','content','category_id','tags'];
+    protected $fillable = ['title', 'slug', 'content', 'category_id', 'tags', 'image'];
 
 
     public function category()

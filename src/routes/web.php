@@ -19,5 +19,5 @@ Route::get('faq/{slug}', 'PageController@faqDetail');
 Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Auth::routes();
-Route::resource('admin/faq', 'Admin\FaqController');
+Route::resource('admin/article', 'Admin\ArticleController');
 Route::resource('admin/category', 'Admin\CategoryController');
