@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Faq;
+use App\Article;
 
-class FaqSeeder extends Seeder
+class ArticleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class FaqSeeder extends Seeder
      */
     public function run()
     {
-        factory(Faq::class, 20)->create();
+        factory(Article::class, 20)->create();
     }
 }
