@@ -13,12 +13,12 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $categories = [
-            ['category'=>'PCR Dan Antigen','slug'=>'pcr-antigen','icon'=>'icon.png'],
-            ['category'=>'PeduliLindungi','slug'=>'pedululindungi','icon'=>'icon.png'],
-            ['category'=>'Prokes Umum','slug'=>'prokes-umum','icon'=>'icon.png'],
-            ['category'=>'Vaksin','slug'=>'vaksin','icon'=>'icon.png'],
-            ['category'=>'Kasus Covid','slug'=>'kasus-covid','icon'=>'icon.png'],
-            ['category'=>'Siranap','slug'=>'siranap','icon'=>'icon.png']
+            ['category' => 'Kantor/Pabrik', 'slug' => 'kantor-pabrik', 'icon' => 'ic_round-home-work.png'],
+            ['category' => 'Perdagangan', 'slug' => 'perdagangan', 'icon' => 'entypo_shop.png'],
+            ['category' => 'Tempat Wisata', 'slug' => 'tempat-wisata', 'icon' => 'tabler_building-carousel.png'],
+            ['category' => 'Tempat Pendidikan', 'slug' => 'tempat-pendidikan', 'icon' => 'ic_round-school.png'],
+            ['category' => 'Tempat Ibadah', 'slug' => 'tempat-ibadah', 'icon' => 'ic_baseline-mosque.png'],
+            ['category' => 'Transportasi', 'slug' => 'transportasi', 'icon' => 'fluent_airplane-24-filled.png']
         ];
 
         Category::insert($categories);
