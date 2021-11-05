@@ -84,9 +84,9 @@ services:
     networks:
       - laravel
 
-  npm:
+  npm_cms_prokes:
     image: node:13.7
-    container_name: npm
+    #container_name: npm
     volumes:
       - ./src:/var/www/html
     ports:
