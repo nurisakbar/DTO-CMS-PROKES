@@ -22,4 +22,10 @@ class PageController extends Controller
         $data['category'] = $category;
         return view('home.category', $data);
     }
+
+    public function article($slug)
+    {
+        $data['article'] = Article::with('category')->where('slug', $slug)->first();
+        return view('home.article', $data);
+    }
 }

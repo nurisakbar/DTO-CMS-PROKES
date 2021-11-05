@@ -16,7 +16,7 @@ use Laravel\Socialite\Facades\Socialite;
 */
 
 Route::get('/', 'PageController@home');
-Route::get('faq/{slug}', 'PageController@faqDetail');
+Route::get('article/{slug}', 'PageController@article');
 Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Route::get('reload-captcha', 'Auth\LoginController@reloadCaptcha');

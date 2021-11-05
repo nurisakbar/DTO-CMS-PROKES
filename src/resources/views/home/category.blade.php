@@ -31,7 +31,7 @@
             <a href="{{ url("article/$article->slug") }}" class="text-decoration-none text-dark">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="{{asset('frontend')}}/assets/img/img-kantor-min.png" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
+                        <img src="{{ asset('storage/article/' . $article->image) }}" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
                         <div class="card-body">
                         <h5>{{ $article->title }}</h5>
                         <p class="card-text">{!! substr($article->content, 0, 80) !!} ..</p>
