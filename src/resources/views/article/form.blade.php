@@ -12,7 +12,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <label for="exampleInputEmail1">Content</label>
-        {!! Form::textarea('content',null,['id'=>'editor','rows'=>10]) !!}
+        {!! Form::textarea('content',null,['id'=>'editor','rows'=>10,'class'=>'form-control']) !!}
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@
 
   @push('scripts')
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
   <script>
     $(document).ready(function (e) {
  
@@ -57,14 +57,6 @@
       });
       
     });
-
-    ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .then( editor => {
-                    console.log( editor );
-            } )
-            .catch( error => {
-                    console.error( error );
-            } );
+    CKEDITOR.replace( 'editor' );
 </script>
   @endpush
