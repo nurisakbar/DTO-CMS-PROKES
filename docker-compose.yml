@@ -97,14 +97,14 @@ services:
     networks:
       - laravel
 
-  artisan:
+  artisan_cms_prokes:
     build:
       context: .
       dockerfile: php.dockerfile
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: artisan
+    #container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
