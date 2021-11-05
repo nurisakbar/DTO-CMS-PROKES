@@ -31,7 +31,7 @@ class UserController extends Controller
                     $btn .= "<button type='submit' class='btn btn-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
                     $btn .= \Form::close();
                     $btn .= '<a class="btn btn-danger btn-sm mx-1" href="user/' . $user->id . '/edit"><i class="fas fa-edit" aria-hidden="true"></i></a>';
-                    $btn .= '<a class="btn btn-danger btn-sm" href="user/' . $user->id . '/profile"><i class="fas fa-key" aria-hidden="true"></i></a>';
+                    //$btn .= '<a class="btn btn-danger btn-sm" href="user/' . $user->id . '/profile"><i class="fas fa-key" aria-hidden="true"></i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])

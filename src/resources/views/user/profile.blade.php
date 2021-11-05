@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="exampleInputEmail1">Nama User/ Layanan</label>
+                <label for="exampleInputEmail1">Nama User</label>
                 {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Nama Lengkap', 'disabled']) !!}
               </div>
             </div>

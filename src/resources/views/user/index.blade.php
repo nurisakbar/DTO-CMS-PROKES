@@ -15,7 +15,7 @@
                     <th width="50">No</th>
                     <th>Nama Lengkap</th>
                     <th>Email</th>
-                    <th width="100">#</th>
+                    <th width="70">#</th>
                 </tr>
             </thead>
         </table>

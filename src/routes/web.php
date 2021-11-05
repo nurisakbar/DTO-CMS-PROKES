@@ -21,7 +21,7 @@ Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Route::get('reload-captcha', 'Auth\LoginController@reloadCaptcha');
 
-Route::get('admin/user/{id}/profile', 'Admin\UserController@profile');
+Route::get('profile', 'Admin\UserController@profile');
 Route::post('admin/user/{id}/updatePassword', 'Admin\UserController@updatePassword');
 
 Auth::routes(['register' => false]);
