@@ -48,6 +48,7 @@
             <?php
     $menus = [
                 ['link'=>'/home','label'=>'Dashboard','icon'=>'fas fa-fw fa-tachometer-alt'],
+                ['link'=>'/admin/user','label'=>'User','icon'=>'fas fa-fw fa-users'],
                 ['link'=>'/admin/category','label'=>'Category','icon'=>'fas fa-fw fa-tachometer-alt'],
                 ['link'=>'/admin/article','label'=>'Article','icon'=>'fas fa-fw fa-newspaper'],
                 ['link'=>'/','label'=>'Lihat Web','icon'=>'fas fa-eye'],

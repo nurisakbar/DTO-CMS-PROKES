@@ -1,44 +1,57 @@
 @extends('layouts.app')
-@section('title','Profile user')
+@section('title','Ganti Password Pengguna')
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Profile User</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Ganti Password Pengguna</h6>
     </div>
     <div class="card-body">
         @include('validation_error')
-        @include('alert')
-        {!! Form::model($user,['url'=>'user/'.$user->id,'method'=>'PUT']) !!}
-        {!! Form::hidden('page', 'profile') !!}
+        @include('failed')
+        {!! Form::model($user,['url'=>'admin/user/'.$user->id.'/updatePassword','method'=>'POST']) !!}
         <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="exampleInputEmail1">Nomor Induk Mahasiswa</label>
-                {!! Form::text('uniq_id', null, ['class'=>'form-control','placeholder'=>'NIK']) !!}
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
                 <label for="exampleInputEmail1">Nama User/ Layanan</label>
-                {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Nama Lengkap']) !!}
+                {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Nama Lengkap', 'disabled']) !!}
               </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'Email', 'disabled']) !!}
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'Email']) !!}
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control"  placeholder="Password">
-              </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password Lama</label>
+              <input type="password" name="current_password" class="form-control"  placeholder="Masukan password lama">
             </div>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password Baru</label>
+              <input type="password" name="new_password" class="form-control"  placeholder="Masukan password baru">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Konfirmasi Password Baru</label>
+              <input type="password" name="confirm_new_password" class="form-control"  placeholder="Masukan konfirmasi password baru">
+            </div>
+          </div>
+        </div>
             <button type="submit" class="btn btn-primary">Update Profile</button>
+            <a href="{{url('admin/user')}}" class="btn btn-primary">Kembali</a>
+
         {!! Form::close() !!}
     </div>
 </div>
