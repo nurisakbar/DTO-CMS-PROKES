@@ -18,7 +18,7 @@ services:
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
-      - php
+      - php_cms_prokes
       # - redis
       - mysql_cms_prokes
       # - mailhog
@@ -44,7 +44,7 @@ services:
     networks:
       - laravel
 
-  php:
+  php_cms_prokes:
     build:
       context: .
       dockerfile: php.dockerfile
@@ -78,7 +78,7 @@ services:
       - ./src:/var/www/html
     working_dir: /var/www/html
     depends_on:
-      - php
+      - php_cms_prokes
     user: ${PHPUSER:-www-data}
     entrypoint: ['composer', '--ignore-platform-reqs']
     networks:
