@@ -11,7 +11,7 @@ services:
       args:
         - NGINXUSER=${NGINXUSER:-www-data}
         - NGINXGROUP=${NGINXGROUP:-www-data}
-    container_name: nginx
+    container_name: nginx_cms_prokes
     ports:
       #- 9090:80
       - '${APP_PORT:-80}:80'
@@ -66,14 +66,14 @@ services:
   #   networks:
   #     - laravel
 
-  composer:
+  composer_cms_prokes:
     build:
       context: .
       dockerfile: composer.dockerfile
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: composer
+    #container_name: composer
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
