@@ -11,7 +11,7 @@ services:
       args:
         - NGINXUSER=${NGINXUSER:-www-data}
         - NGINXGROUP=${NGINXGROUP:-www-data}
-    container_name: nginx_dto_prokes_cms
+    container_name: nginx
     ports:
       #- 9090:80
       - '${APP_PORT:-80}:80'
@@ -20,18 +20,18 @@ services:
     depends_on:
       - php
       # - redis
-      - mysql
+      - mysql_cms_prokes
       # - mailhog
     networks:
       - laravel
 
-  mysql:
+  mysql_cms_prokes:
     image: mariadb:10.6
-    container_name: mysql_dto_prokes_cms
+    #container_name: mysql
     restart: unless-stopped
     tty: true
     ports:
-      - 3307:3306
+      - 3306:3306
     environment:
       MYSQL_DATABASE: homestead
       MYSQL_USER: homestead
@@ -51,7 +51,7 @@ services:
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: php_dto_prokes_cms
+    container_name: php
     volumes:
       - ./src:/var/www/html:delegated
     networks:
@@ -73,7 +73,7 @@ services:
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: composer_dto_prokes_cms
+    container_name: composer
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -86,7 +86,7 @@ services:
 
   npm:
     image: node:13.7
-    container_name: npm_dto_prokes_cms
+    container_name: npm
     volumes:
       - ./src:/var/www/html
     ports:
@@ -104,11 +104,11 @@ services:
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: artisan_dto_prokes_cms
+    container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
-      - mysql
+      - mysql_cms_prokes
     working_dir: /var/www/html
     entrypoint: ['php', '/var/www/html/artisan']
     networks:
