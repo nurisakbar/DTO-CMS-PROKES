@@ -51,7 +51,7 @@ services:
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: php
+    #container_name: php
     volumes:
       - ./src:/var/www/html:delegated
     networks:
