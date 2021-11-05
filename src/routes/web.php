@@ -20,6 +20,12 @@ Route::get('article/{slug}', 'PageController@article');
 Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Route::get('reload-captcha', 'Auth\LoginController@reloadCaptcha');
+
+Route::get('admin/user/{id}/profile', 'Admin\UserController@profile');
+Route::post('admin/user/{id}/updatePassword', 'Admin\UserController@updatePassword');
+
 Auth::routes(['register' => false]);
+
 Route::resource('admin/article', 'Admin\ArticleController');
 Route::resource('admin/category', 'Admin\CategoryController');
+Route::resource('admin/user', 'Admin\UserController');
