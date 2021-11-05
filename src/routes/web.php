@@ -20,6 +20,6 @@ Route::get('faq/{slug}', 'PageController@faqDetail');
 Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Route::get('reload-captcha', 'Auth\LoginController@reloadCaptcha');
-Auth::routes();
+Auth::routes(['register' => false]);
 Route::resource('admin/article', 'Admin\ArticleController');
 Route::resource('admin/category', 'Admin\CategoryController');
