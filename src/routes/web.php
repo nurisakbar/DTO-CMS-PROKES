@@ -29,3 +29,6 @@ Auth::routes(['register' => false]);
 Route::resource('admin/article', 'Admin\ArticleController');
 Route::resource('admin/category', 'Admin\CategoryController');
 Route::resource('admin/user', 'Admin\UserController');
+Route::get('test',function(){
+    return view('layout');
+});
