@@ -13,8 +13,9 @@
     <meta property="og:description" content="Protokol Kesehatan Bagi Masyarakat di Tempat dan Fasilitas Umum dalam rangka Pencegahan dan Pengendalian Corona Virus Disease 2019 (Covid-19)">
 
     <!-- Bootstrap CSS -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}"> --}}
+    {{-- <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Protokol Kesehatan Umum</title>
