@@ -14,7 +14,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}"> --}}
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Protokol Kesehatan Umum</title>
