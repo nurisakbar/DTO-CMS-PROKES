@@ -39,7 +39,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="{{asset('img-container2.png')}}" class="img-fluid" alt="Penerapan Protokol Kesehatan Umum">
+          <img src="{{asset('img-container2.jpg')}}" class="img-fluid" alt="Penerapan Protokol Kesehatan Umum">
         </div><!-- /col-md-6 -->
         <div class="col-md-6">
           <h3>Penerapan Protokol Kesehatan Umum</h3>
