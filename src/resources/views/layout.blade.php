@@ -62,12 +62,12 @@
             </div>
           </div><!-- /col-md-6 -->
           <div class="col-md-6">
-            <img src="assets/img/Group-4.png" class="img-fluid img-global" alt="Penerapan Protokol Kesehatan Umum"> 
+            <img src="{{asset('assets/img/Group-4.png')}}" class="img-fluid img-global" alt="Penerapan Protokol Kesehatan Umum"> 
           </div><!-- /col-md-6 -->
         </div><!-- /row -->     
       </div><!-- /container -->
       <div>
-        <img src="assets/img/bintil.png" class="dotted">
+        <img src="{{asset('assets/img/bintil.png')}}" class="dotted">
       </div>
     </section><!-- /bg-ornament -->
     
@@ -90,7 +90,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="assets/img/img-container.png" class="img-fluid" alt="Penerapan Protokol Kesehatan Umum">
+            <img src="{{asset('assets/img/img-container.png')}}" class="img-fluid" alt="Penerapan Protokol Kesehatan Umum">
           </div><!-- /col-md-6 -->
           <div class="col-md-6">
             <h3>Penerapan Protokol Kesehatan Umum</h3>
