@@ -10,7 +10,7 @@
 
 <footer class="footer mt-auto py-5">
     <div class="container text-center">
-      <span>&copy; Kementrian Kesehatan RI</span>  
+      <span>&copy; Kementerian Kesehatan RI</span>  
     </div>
 </footer><!-- /footer -->
 
