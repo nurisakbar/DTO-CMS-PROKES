@@ -32,3 +32,8 @@ Route::resource('admin/user', 'Admin\UserController');
 Route::get('home',function(){
     return redirect('admin/article');
 });
+
+Route::get('prokes-umum-pengunjung','PageController@prokesUmumPengunjung');
+Route::get('prokes-umum-petugas','PageController@prokesUmumPetugas');
+Route::get('prokes-umum-pengelola','PageController@prokesUmumPengelola');
+Route::get('titik-kritis-penularan','PageController@titikKritisPenularan');

@@ -9,20 +9,16 @@
       <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNav">
         <ul class="navbar-nav ms-auto flex-nowrap">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Ruang Publik
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="perkantoran-pabrik.html">Kantor/Pabrik</a></li>
-              <li><a class="dropdown-item" href="tempat-wisata.html">Tempat Wisata</a></li>
-              <li><a class="dropdown-item" href="pendidikan.html">Pendidikan</a></li>
-              <li><a class="dropdown-item" href="perdagangan.html">Perdagangan</a></li>
-              <li><a class="dropdown-item" href="tempat-ibadah.html">Tempat Ibadah</a></li>
-              <li><a class="dropdown-item" href="transportasi.html">Transportasi</a></li>
-              <li><a class="dropdown-item" href="event-nasional-internasional.html">Event Nasional/ International</a></li>
+              @foreach (\App\Category::all() as $category)
+                <li>{{ link_to('category/'.$category->slug,$category->category,['class'=>'dropdown-item'])}}</li>
+              @endforeach
             </ul>
           </li>
         </ul>

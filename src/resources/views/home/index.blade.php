@@ -11,7 +11,7 @@
           </div>
         </div><!-- /col-md-6 -->
         <div class="col-md-6">
-          <img src="{{asset('frontend')}}/assets/img/Group-4.png" class="img-fluid img-global" alt="Penerapan Protokol Kesehatan Umum"> 
+          <img src="{{asset('frontend')}}/assets/img/Group-41.png" class="img-fluid img-global" alt="Penerapan Protokol Kesehatan Umum"> 
         </div><!-- /col-md-6 -->
       </div><!-- /row -->     
     </div><!-- /container -->
@@ -64,19 +64,19 @@
           <img src="{{asset('frontend')}}/assets/img/img-wrapper1.png" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
           <h4>Pengunjung</h4>
           <p>Protokol Kesehatan Umum di tempat publik untuk Pengunjung</p>
-          <a href="prokes-umum-pengunjung.html" class="btn btn-2">Selengkapnya</a>
+          <a href="prokes-umum-pengunjung" class="btn btn-2">Selengkapnya</a>
         </div><!-- /col-4 -->
         <div class="col-md-4 pb-4">
           <img src="{{asset('frontend')}}/assets/img/img-wrapper-1.png" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
           <h4>Petugas</h4>
           <p>Protokol Kesehatan Umum di tempat publik untuk Petugas</p>
-          <a href="prokes-umum-petugas.html" class="btn btn-2">Selengkapnya</a>
+          <a href="prokes-umum-petugas" class="btn btn-2">Selengkapnya</a>
         </div><!-- /col-4 -->
         <div class="col-md-4 pb-4">
           <img src="{{asset('frontend')}}/assets/img/img-wrapper-2.png" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
           <h4>Pengelola</h4>
           <p>Protokol Kesehatan Umum di tempat publik untuk Pengelola</p>
-          <a href="prokes-umum-pengelola.html" class="btn btn-2">Selengkapnya</a>
+          <a href="prokes-umum-pengelola" class="btn btn-2">Selengkapnya</a>
         </div><!-- /col-4 -->
       </div><!-- /row -->
     </div><!-- /container -->
