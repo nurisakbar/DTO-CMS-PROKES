@@ -26,6 +26,7 @@ class ArticleStoreRequest extends FormRequest
         return [
             'title'             =>  'required',
             'content'           =>  'required',
+            'tags'              => 'required',
             'image'             =>  'image|mimes:jpg,png,jpeg|max:2048'
         ];
     }
