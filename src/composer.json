@@ -25,6 +25,7 @@
         "mews/captcha": "^3.2",
         "rap2hpoutre/fast-excel": "^3.0",
         "sentry/sentry-laravel": "^1.8",
+        "unisharp/laravel-filemanager": "^2.3",
         "uxweb/sweet-alert": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.10"
     },

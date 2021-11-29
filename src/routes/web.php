@@ -21,6 +21,10 @@ Route::get('category/{slug}', 'PageController@category');
 Route::get('search', 'PageController@search');
 Route::get('reload-captcha', 'Auth\LoginController@reloadCaptcha');
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::get('profile', 'Admin\UserController@profile');
 Route::post('admin/user/{id}/updatePassword', 'Admin\UserController@updatePassword');
 
