@@ -1,6 +1,10 @@
 <div class="form-group">
-    <label for="exampleInputEmail1">Title</label>
-    {!! Form::text('title', null, ['class'=>'form-control','placeholder'=>'Title']) !!}
+    <label for="exampleInputEmail1">Title ( ID )</label>
+    {!! Form::text('title', null, ['class'=>'form-control','placeholder'=>'Title ID']) !!}
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title ( Eng )</label>
+    {!! Form::text('title_eng', null, ['class'=>'form-control','placeholder'=>'Title Eng']) !!}
   </div>
   <div class="row">
     <div class="col-md-12">
@@ -11,8 +15,14 @@
     </div>
     <div class="col-md-12">
       <div class="form-group">
-        <label for="exampleInputEmail1">Content</label>
+        <label for="exampleInputEmail1">Content ( ID )</label>
         {!! Form::textarea('content',null,['id'=>'editor','rows'=>10,'class'=>'form-control']) !!}
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Content ( Eng )</label>
+        {!! Form::textarea('content_eng',null,['id'=>'editor2','rows'=>10,'class'=>'form-control']) !!}
       </div>
     </div>
   </div>
@@ -65,5 +75,6 @@
     filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
   };
     CKEDITOR.replace( 'editor', options );
+    CKEDITOR.replace( 'editor2', options );
 </script>
   @endpush

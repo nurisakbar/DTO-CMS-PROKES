@@ -7,7 +7,7 @@
     <div class="container ">
       <div class="row text-center">
         <div class="col-12">
-          <h1 class="title2">Protokol Kesehatan Umum di Tempat Publik</h1>
+          <h1 class="title2">@lang('static_content.prokes_ditempat_publik')</h1>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
   <div class="container">
     <div class="row py-5">
         <div class="col-md-8">
-          <h3>Petugas</h3>
+          <h3>@lang('static_content.petugas')</h3>
           <ul class="padding-left">
             <li>Self-Assessment sebelum keluar rumah</li>
             <li>Menggunakan APD sesuai standar aktivitas (seperti masker rangkap, faceshield, sarung tangan)</li>
@@ -29,7 +29,7 @@
             <li>Mengatur kapasitas orang di dalam ruangan</li>
           </ul>
           <div class="d-grid gap-2 py-5">
-          <a href="/titik-kritis-penularan" class="btn btn-1 btn-lg">Titik Kritis Penularan COVID-19</a>
+          <a href="/titik-kritis-penularan" class="btn btn-1 btn-lg">@lang('static_content.titik_kritis_penularan_covid')</a>
           </div>
         </div>
         <div class="col-md-4">

@@ -8,12 +8,23 @@
       </button>
       <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNav">
         <ul class="navbar-nav ms-auto flex-nowrap">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              @lang('static_content.language')
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/lang/id">Indonesia</a>
+              <a class="dropdown-item" href="/lang/en">Inggris</a>
+            </li>
+          </ul>
+          </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+            <a class="nav-link active" aria-current="page" href="/">@lang('static_content.home')</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ruang Publik
+              @lang('static_content.tempat_publik')
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               @foreach (\App\Category::all() as $category)

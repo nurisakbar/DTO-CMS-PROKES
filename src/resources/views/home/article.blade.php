@@ -18,8 +18,26 @@
   <div class="container">
     <div class="row pt-5">
       <div class="col-12">
-        <h3>{!! $article->title !!}</h3>
-        <p>{!! $article->content !!}</p>
+        <h3>
+        <?php
+                          if(session::has('locale'))
+                          {
+                            echo session('locale')=='en'?$article->title_eng:$article->title;
+                          } else{
+                            echo $article->title;
+                          } 
+                          ?>
+          </h3>
+        <p>
+        <?php
+        if(session::has('locale'))
+        {
+          echo session('locale')=='en'?$article->content_eng:$article->content;
+        } else{
+          echo $article->content;
+        } 
+        ?>
+        </p>
       </div>
     </div>
   </div>

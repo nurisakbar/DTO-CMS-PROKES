@@ -41,3 +41,9 @@ Route::get('prokes-umum-pengunjung','PageController@prokesUmumPengunjung');
 Route::get('prokes-umum-petugas','PageController@prokesUmumPetugas');
 Route::get('prokes-umum-pengelola','PageController@prokesUmumPengelola');
 Route::get('titik-kritis-penularan','PageController@titikKritisPenularan');
+
+Route::get('lang/{lang}',function($lang){
+    App::setLocale($lang);
+    \session()->put('locale', $lang);
+    return redirect()->back();
+});

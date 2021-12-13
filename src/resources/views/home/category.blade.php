@@ -33,7 +33,16 @@
                     <div class="card shadow-sm">
                         <img src="{{ asset('storage/article/' . $article->image) }}" class="img-fluid rounded pb-2" alt="Protokol Kesehatan">
                         <div class="card-body">
-                        <h5>{{ $article->title }}</h5>
+                          <h5>
+                          <?php
+                          if(session::has('locale'))
+                          {
+                            echo session('locale')=='en'?$article->title_eng:$article->title;
+                          } else{
+                            echo $article->title;
+                          } 
+                          ?>
+                          </h5>
                         <p class="card-text">{!! substr($article->content, 0, 80) !!} ..</p>
                         </div>
                     </div>
