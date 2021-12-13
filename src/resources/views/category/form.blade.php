@@ -1,6 +1,10 @@
 <div class="form-group">
-    <label for="exampleInputEmail1">Category Name</label>
+    <label for="exampleInputEmail1">Category Name ( ID )</label>
     {!! Form::text('category', null, ['class'=>'form-control','placeholder'=>'Category Name']) !!}
+</div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Category Name ( Eng )</label>
+  {!! Form::text('category_eng', null, ['class'=>'form-control','placeholder'=>'Category Name']) !!}
 </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Description</label>

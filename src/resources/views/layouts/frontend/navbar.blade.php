@@ -28,7 +28,15 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               @foreach (\App\Category::all() as $category)
-                <li>{{ link_to('category/'.$category->slug,$category->category,['class'=>'dropdown-item'])}}</li>
+              <?php
+                          if(session::has('locale'))
+                          {
+                            $categoryName = session('locale')=='en'?$category->category_eng:$category->category;
+                          } else{
+                            $categoryName = $category->category;
+                          } 
+                          ?>
+                <li>{{ link_to('category/'.$category->slug,$categoryName,['class'=>'dropdown-item'])}}</li>
               @endforeach
             </ul>
           </li>
